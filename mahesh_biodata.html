@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahesh M. Sawarkar — Biodata</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Marcellus&family=Karla:wght@400;500;600;700&family=Tiro+Devanagari+Hindi&display=swap');
+
+  :root{
+    --maroon: #4a1120;
+    --maroon-deep: #2e0912;
+    --maroon-soft: #6e1c30;
+    --gold: #c9973f;
+    --gold-light: #e8c988;
+    --gold-pale: #f3e3bd;
+    --ivory: #f8f1e4;
+    --ivory-2: #efe3c9;
+    --ink: #2a1c14;
+    --ink-soft: #77645a;
+    --line: #d9c39c;
+    --emerald: #1e4536;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; }
+
+  body{
+    background: var(--ivory);
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(201,151,63,0.10) 0, transparent 40%),
+      radial-gradient(circle at 88% 92%, rgba(74,17,32,0.08) 0, transparent 42%);
+    font-family:'Karla', sans-serif;
+    color: var(--ink);
+    padding: 54px 20px 80px;
+  }
+
+  .sheet{
+    max-width: 940px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 300px 1fr;
+    background:#fffdf8;
+    box-shadow: 0 2px 4px rgba(50,15,10,0.10), 0 34px 70px -30px rgba(50,15,10,0.35);
+    position:relative;
+    border: 1px solid var(--line);
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar{
+    position:relative;
+    background: linear-gradient(165deg, var(--maroon) 0%, var(--maroon-deep) 78%);
+    color: var(--ivory);
+    padding: 46px 34px 40px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+
+  .sidebar::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image: repeating-linear-gradient(135deg, rgba(232,201,136,0.05) 0px, rgba(232,201,136,0.05) 1px, transparent 1px, transparent 26px);
+    pointer-events:none;
+  }
+
+  .sidebar::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:0;
+    height: 10px;
+    background: linear-gradient(to right, var(--gold), var(--gold-light), var(--gold));
+  }
+
+  .medallion{
+    position:relative;
+    width: 156px; height:156px;
+    margin-bottom: 22px;
+    z-index:1;
+  }
+  .medallion svg{ position:absolute; inset:0; width:100%; height:100%; }
+  .medallion .frame{ animation:none; }
+  .photo-disc{
+    position:absolute;
+    inset: 14px;
+    border-radius:50%;
+    background: var(--ivory-2);
+    border: 2px solid var(--gold-light);
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .photo-disc svg{ width:56%; height:56%; fill: var(--maroon); opacity:0.4; position:static; }
+  .photo-disc img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .kicker-dev{
+    font-family:'Tiro Devanagari Hindi', serif;
+    font-size: 15px;
+    color: var(--gold-light);
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+    z-index:1;
+  }
+
+  .kicker{
+    font-family:'Marcellus', serif;
+    font-size: 10.5px;
+    letter-spacing: 0.34em;
+    text-transform:uppercase;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+    z-index:1;
+  }
+
+  .sidebar h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size: 33px;
+    line-height:1.15;
+    margin: 0 0 6px;
+    color: #fdf7ea;
+    z-index:1;
+  }
+
+  .sidebar .dob{
+    font-family:'Marcellus', serif;
+    font-size: 13px;
+    color: var(--gold-pale);
+    letter-spacing:0.03em;
+    margin-bottom: 26px;
+    z-index:1;
+  }
+
+  .side-divider{
+    width: 46px; height:1px;
+    background: var(--gold);
+    margin-bottom: 26px;
+    z-index:1;
+  }
+
+  .quickfacts{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap: 16px;
+    text-align:left;
+    z-index:1;
+  }
+  .qf-item{
+    display:flex;
+    align-items:flex-start;
+    gap: 12px;
+  }
+  .qf-item svg{
+    width:15px; height:15px;
+    fill: var(--gold-light);
+    flex-shrink:0;
+    margin-top:2px;
+  }
+  .qf-item .qf-text{
+    font-size: 13px;
+    line-height:1.45;
+    color: var(--ivory-2);
+  }
+  .qf-item .qf-text b{
+    display:block;
+    font-family:'Marcellus', serif;
+    font-size: 10px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color: var(--gold-light);
+    margin-bottom: 2px;
+    font-weight:400;
+  }
+
+  .side-foot{
+    margin-top: auto;
+    padding-top: 30px;
+    font-family:'Marcellus', serif;
+    font-size: 10px;
+    letter-spacing:0.15em;
+    color: var(--gold-pale);
+    text-transform:uppercase;
+    opacity:0.8;
+    z-index:1;
+  }
+
+  /* ===== MAIN CONTENT ===== */
+  .content{
+    padding: 50px 52px 44px;
+    position:relative;
+  }
+
+  .content::before{
+    content:"";
+    position:absolute; top:36px; bottom:36px; left:0;
+    width:1px;
+    background: linear-gradient(to bottom, transparent, var(--line), transparent);
+  }
+
+  .top-strip{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom: 6px;
+  }
+  .top-strip .eyebrow{
+    font-family:'Marcellus', serif;
+    font-size: 11px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color: var(--gold);
+  }
+  .top-strip .ref{
+    font-size: 11px;
+    color: var(--ink-soft);
+    font-style:italic;
+  }
+
+  .section{ margin-top: 38px; }
+  .section:first-of-type{ margin-top: 18px; }
+
+  .section-title{
+    display:flex;
+    align-items:center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .section-title .glyph{
+    width:34px; height:34px;
+    flex-shrink:0;
+  }
+  .section-title .glyph svg{ width:100%; height:100%; }
+  .section-title h2{
+    font-family:'Marcellus', serif;
+    font-size: 17px;
+    letter-spacing:0.1em;
+    text-transform: uppercase;
+    color: var(--maroon);
+    margin:0;
+    white-space:nowrap;
+  }
+  .section-title .rule{
+    flex:1;
+    height:1px;
+    background: linear-gradient(to right, var(--line), transparent 85%);
+  }
+
+  .ledger{
+    border-top: 1px solid var(--line);
+  }
+  .row{
+    display:grid;
+    grid-template-columns: 190px 1fr;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .row:nth-child(odd){ background: rgba(201,151,63,0.045); }
+  .row .label{
+    font-family:'Marcellus', serif;
+    font-size: 12.5px;
+    letter-spacing:0.03em;
+    color: var(--ink-soft);
+  }
+  .row .value{
+    font-size: 15px;
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .highlight-band{
+    margin-top: 40px;
+    background: linear-gradient(120deg, var(--emerald), #14352a);
+    border-radius: 3px;
+    padding: 20px 26px;
+    display:flex;
+    align-items:center;
+    gap: 16px;
+    color: var(--gold-pale);
+  }
+  .highlight-band svg{ width:26px; height:26px; fill:var(--gold-light); flex-shrink:0; }
+  .highlight-band .htext{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height:1.5;
+    color: #f3ecd8;
+  }
+
+  .content-footer{
+    margin-top: 44px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .content-footer .om{
+    font-family:'Tiro Devanagari Hindi', serif;
+    font-size: 15px;
+    color: var(--maroon-soft);
+  }
+  .content-footer .stamp{
+    font-family:'Marcellus', serif;
+    font-size: 10px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color: var(--gold);
+  }
+
+  @media (max-width: 760px){
+    .sheet{ grid-template-columns: 1fr; }
+    .content::before{ display:none; }
+    .content{ padding: 40px 26px 34px; }
+    .sidebar{ padding: 40px 26px 34px; }
+    .row{ grid-template-columns: 140px 1fr; }
+  }
+
+  @media print{
+    body{ padding:0; background:#fff; }
+    .sheet{ box-shadow:none; border:none; grid-template-columns: 260px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+
+    <div class="kicker-dev">॥ श्री गणेशाय नमः ॥</div>
+    <div class="kicker">Vivah Parichay</div>
+
+    <div class="medallion">
+      <svg viewBox="0 0 156 156">
+        <circle cx="78" cy="78" r="76" fill="none" stroke="#c9973f" stroke-width="1"/>
+        <circle cx="78" cy="78" r="70" fill="none" stroke="#e8c988" stroke-width="0.6"/>
+        <g fill="none" stroke="#c9973f" stroke-width="0.6">
+          <circle cx="78" cy="4" r="2.4" fill="#c9973f" stroke="none"/>
+          <circle cx="78" cy="152" r="2.4" fill="#c9973f" stroke="none"/>
+          <circle cx="4" cy="78" r="2.4" fill="#c9973f" stroke="none"/>
+          <circle cx="152" cy="78" r="2.4" fill="#c9973f" stroke="none"/>
+        </g>
+      </svg>
+      <div class="photo-disc">
+        <img src="image.jpeg" alt="Mahesh M. Sawarkar">
+      </div>
+    </div>
+
+    <h1>Mahesh M.Sawarkar</h1>
+    <div class="dob">15th January, 1989&nbsp;</div>
+
+    <div class="side-divider"></div>
+    <div class="quickfacts">
+      <div class="qf-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <div class="qf-text"><b>Native Place</b>Kamptee, Nagpur</div>
+      </div>
+      <div class="qf-item">
+        <svg viewBox="0 0 24 24"><path d="M12 3 2 12h3v8h6v-6h2v6h6v-8h3z"/></svg>
+        <div class="qf-text"><b>Occupation</b>Computer Engineer, Proprietor at Saikrupa Computer</div>
+      </div>
+      <div class="qf-item">
+        <svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2V17c0 2 3 3.6 7 3.6s7-1.6 7-3.6v-3.8l-7 3.8-7-3.8z"/></svg>
+        <div class="qf-text"><b>Education</b>Graduate — B.Com</div>
+      </div>
+      <div class="qf-item">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-8-4.6-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6.4-8 11-8 11z"/></svg>
+        <div class="qf-text"><b>Contact</b>+91 93736 21973</div>
+      </div>
+      <div class="qf-item">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <div class="qf-text"><b>Email</b>maheshsawarkar897@gmail.com</div>
+      </div>
+    </div>
+
+    <div class="side-foot">Family &amp; Elders' Blessings</div>
+  </aside>
+
+  <!-- ============ CONTENT ============ -->
+  <div class="content">
+
+    <div class="top-strip">
+      <span class="eyebrow">Biodata for Marriage</span>
+      <span class="ref">Pin — 441001</span>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <span class="glyph"><svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="16" fill="none" stroke="#c9973f" stroke-width="1"/><path d="M17 9c-2.5 0-4 1.8-4 4 0 1.3.5 2.2 1.3 2.8-1.3.5-2.6 1.8-2.6 4 0 2.6 2.3 4.3 5.3 4.3s5.3-1.7 5.3-4.3c0-2.2-1.3-3.5-2.6-4 .8-.6 1.3-1.5 1.3-2.8 0-2.2-1.5-4-4-4z" fill="#4a1120"/><circle cx="15" cy="13.6" r="0.7" fill="#f8f1e4"/><circle cx="19" cy="13.6" r="0.7" fill="#f8f1e4"/></svg></span>
+        <h2>Personal Details</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="ledger">
+        <div class="row"><div class="label">Birth Place</div><div class="value">Kamptee, Nagpur</div></div>
+        <div class="row"><div class="label">Date of Birth</div><div class="value">15 January 1989</div></div>
+        <div class="row"><div class="label">Caste</div><div class="value">OBC (Teli)</div></div>
+        <div class="row"><div class="label">Height</div><div class="value">5 ft 8 in</div></div>
+        <div class="row"><div class="label">Complexion</div><div class="value">Fair</div></div>
+        <div class="row"><div class="label">Education Level</div><div class="value">Graduate</div></div>
+        <div class="row"><div class="label">Education Details</div><div class="value">B.Com</div></div>
+        <div class="row"><div class="label">Occupation</div><div class="value">Computer Engineer</div></div>
+        <div class="row"><div class="label">Business</div><div class="value">Proprietor, Rt Computer</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <span class="glyph"><svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="16" fill="none" stroke="#c9973f" stroke-width="1"/><path d="M12 22v-2c0-2.2 2.2-4 5-4s5 1.8 5 4v2" fill="none" stroke="#4a1120" stroke-width="1.4"/><circle cx="17" cy="13" r="3" fill="#4a1120"/></svg></span>
+        <h2>Family Background</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="ledger">
+        <div class="row"><div class="label">Father</div><div class="value">Manohar Yashwantrao Sawarkar(Late)</div></div>
+        <div class="row"><div class="label">Mother</div><div class="value">Hiratai Manohar Sawarkar</div></div>
+        <div class="row"><div class="label">Sister</div><div class="value">One Sister (Married)</div></div>
+        <div class="row"><div class="label">Brother</div><div class="value">One Brother (Married)</div></div>
+        <div class="row"><div class="label">Maternal Family (Mama)</div><div class="value">Chindhalore, at Tumsar</div></div>
+      </div>
+    </div>
+
+    <div class="highlight-band">
+      <svg viewBox="0 0 24 24"><path d="M12 2 9 9l-7 1 5 5-1.5 7L12 18l6.5 4L17 15l5-5-7-1z"/></svg>
+      <div class="htext">"Seeking a life partner to build a home rooted in respect, warmth, and shared purpose."</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <span class="glyph"><svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="16" fill="none" stroke="#c9973f" stroke-width="1"/><path d="M11 12h12v10H11z" fill="none" stroke="#4a1120" stroke-width="1.3"/><path d="M11 12l6 5 6-5" fill="none" stroke="#4a1120" stroke-width="1.3"/></svg></span>
+        <h2>Contact Details</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="ledger">
+        <div class="row"><div class="label">Contact No.</div><div class="value">9373621973</div></div>
+        <div class="row"><div class="label">Residential Address</div><div class="value">Near Hanuman Mandir, Telipura, Yerkheda, Kamptee</div></div>
+        <div class="row"><div class="label">Pin Code</div><div class="value">441001</div></div>
+      </div>
+    </div>
+
+    <div class="content-footer">
+      <span class="om">॥ शुभं भवतु ॥</span>
+      <span class="stamp">Sawarkar Family</span>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
